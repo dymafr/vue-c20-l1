@@ -23,6 +23,6 @@ const input = ref<string>('');
 @import './assets/scss/base.scss';
 
 .card {
-  width: 100%;
+  width: 500px;
 }
 </style>
