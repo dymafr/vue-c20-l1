@@ -16,48 +16,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-let nextNum = ref(10);
-const items = ref<number[]>([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
-function randomIndex() {
-  return Math.floor(Math.random() * items.value.length);
-}
-
-function add() {
-  items.value.splice(randomIndex(), 0, nextNum.value++);
-}
-
-function remove() {
-  items.value.splice(randomIndex(), 1);
-}
+const input = ref<string>('');
 </script>
 
 <style lang="scss">
 @import './assets/scss/base.scss';
 
-li {
-  cursor: pointer;
+.card {
   width: 100%;
-}
-
-.container {
-  position: relative;
-  padding: 0;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-
-.list-leave-active {
-  position: absolute;
 }
 </style>
