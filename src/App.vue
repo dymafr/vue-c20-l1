@@ -1,15 +1,14 @@
 <template>
-  <div class="p-20">
-    <div class="mb-20 d-flex w100 justify-content-center align-items-center">
-      <button class="btn btn-primary mr-20" @click="add">Ajouter</button>
-      <button class="btn btn-primary" @click="remove">Enlever</button>
-    </div>
-    <div class="container">
-      <TransitionGroup name="list" tag="ul">
-        <li class="mb-10 card" v-for="item in items" :key="item">
-          {{ item }}
-        </li>
-      </TransitionGroup>
+  <div class="p-20 d-flex justify-content-center">
+    <div class="card">
+      <h1 class="mb-20">Todo List</h1>
+      <div class="d-flex align-items-center">
+        <input v-model="input" type="text" class="flex-fill mr-20" />
+        <button class="btn btn-primary mr-20">Ajouter</button>
+      </div>
+      <ul>
+        <li class="d-flex align-items-center"></li>
+      </ul>
     </div>
   </div>
 </template>
